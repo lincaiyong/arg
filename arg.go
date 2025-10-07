@@ -18,8 +18,16 @@ func BoolArgs() map[string]bool {
 	return gBlArgs
 }
 
+func BoolArg(name string) bool {
+	return gBlArgs[name]
+}
+
 func KeyValueArgs() map[string]string {
 	return gKvArgs
+}
+
+func KeyValueArg(name string) string {
+	return gKvArgs[name]
 }
 
 func Parse() {
