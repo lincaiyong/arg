@@ -26,8 +26,12 @@ func KeyValueArgs() map[string]string {
 	return gKvArgs
 }
 
-func KeyValueArg(name string) string {
-	return gKvArgs[name]
+func KeyValueArg(name, default_ string) string {
+	if ret, ok := gKvArgs[name]; ok {
+		return ret
+	} else {
+		return default_
+	}
 }
 
 func Parse() {
