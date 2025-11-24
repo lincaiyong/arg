@@ -39,7 +39,7 @@ func Parse() {
 		return
 	}
 	rawArgs := os.Args[1:]
-	wordRegex := regexp.MustCompile("^[a-z]+$")
+	wordRegex := regexp.MustCompile("^[a-zA-Z0-9_-]+$")
 	for _, arg := range rawArgs {
 		if strings.HasPrefix(arg, "--") {
 			rest := arg[2:]
